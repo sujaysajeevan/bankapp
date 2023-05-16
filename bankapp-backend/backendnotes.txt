@@ -1,0 +1,45 @@
+Backend for Bankapp
+                   NODEJS + EXPRESS + MONGODB
+-------------------------------------------------------------------
+
+
+    Basic steps
+-------------------------------------
+1 Creation of package.json file - npm init or ( npm init -y )
+  ->package.json= A file where newly added libraries are listed
+2 Create index.js file as entry point of server app.
+3 Install EXPRESS - npm i express 
+4 Import express in index.js - const express = require("express");
+5 using express create a server application - express()
+6 Setup port number for server app - server.listen()
+7 Install cors  - npm i cors - (cross origin resourse sharing) 
+      //CORS is 3rd party library used to connect frontend and backend if both are using two different ports.
+8 Use cors in server app
+9 parse json data to the js in server app (as the js can't understand json data)- use(express.json())
+      //install nodemon - after installing nodemon, we don't have to run the index.js every time after making a change to index.js
+10 To resolve client requests : get,put,post,delete
+11 Create DB and collection in MONGODB 
+12 Database connection with NODEJS server - mongoose -(a library)
+13 Install mongoose - npm i mongoose
+14 Create a folder as services
+15 Create a file as a db.js in services 
+16 In db.js:
+        1.Import mongoose
+        2.Define a connection string between Express and MONGODB
+        3.Create a model and schema for storing data into the database
+        4.Export the collection 
+17 Logic to resolve the client requests - Create a new file in services - logic.js
+    In logic.js:
+        1.Import db.js
+        2.Create a arrow function for register and export it
+18 Login integration 
+      1 create a logic for login - login()
+      2 login server api call
+      3 Testing in postman
+19 Balance Enquiry 
+      Authorization - 
+      1 JsonWebToken - JWB Token Install - npm i jsonwebtoken
+      2 import jwttoken into logic.js
+      3- Generate a Token - sign()
+            using jwtoken , generate token for user who logined successfully
+            4 to set token into the localstorage
